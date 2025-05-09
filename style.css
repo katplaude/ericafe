@@ -1,0 +1,407 @@
+/* -----------------------------------
+   Animation
+------------------------------------ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    color: #FEECD3;
+    animation: bounce 2s infinite;
+    text-decoration: none;
+    z-index: 10;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+@keyframes strongBounce {
+    0%, 100% {
+        transform: rotate(0deg) translateY(0);
+    }
+    25% {
+        transform: rotate(5deg) translateY(-10px);
+    }
+    50% {
+        transform: rotate(-5deg) translateY(10px);
+    }
+    75% {
+        transform: rotate(5deg) translateY(-10px);
+    }
+}
+
+.cup,
+.straw2,
+.bean3,
+.crois
+{
+    animation: strongBounce 2.5s ease-in-out infinite;
+}
+
+
+
+/* -----------------------------------
+   Typography
+------------------------------------ */
+h1, h2, h3, h4 {
+    font-family: 'Gaegu', 'Comic Sans MS', cursive, sans-serif;
+    font-weight: 700;
+    margin: 0;
+    font-size: clamp(25px, 5vw, 55px);
+    font-size-adjust: 0.5;
+}
+
+h1 { color: #3F1F0B; }
+h2 { color: #C9453D; }
+h3 { color: #885D42; }
+h4 { color: #A29429; }
+
+strong, b {
+    font-weight: 900;
+}
+
+body, p, li, a {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 300;
+    font-size: clamp(19px, 2vw, 54px);
+}
+
+
+/* -----------------------------------
+   Layout & Base
+------------------------------------ */
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #FEECD3;
+    color: #3F1F0B;
+}
+
+main {
+    padding: 2vw;
+}
+
+.description,
+.hours,
+.instagram,
+.map {
+    margin-bottom: 4rem;
+}
+
+
+/* -----------------------------------
+   Decorative Elements
+------------------------------------ */
+.decorative-container {
+    position: relative;
+}
+
+.straw1,
+.cr {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+
+/* -----------------------------------
+   Hero Section
+------------------------------------ */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("images/first.png") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 5vw;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120vh;
+    background: rgba(63, 31, 11, 0.75);
+    filter: blur(8px);
+    z-index: 0;
+}
+
+.heroText {
+    margin-top: -30vh;
+    font-size: clamp(40px, 5vw, 48px);
+    font-family: 'Gaegu', 'Comic Sans MS', cursive, sans-serif;
+    font-size-adjust: 0.5;
+    line-height: 1.5;
+    color: #FEECD3;
+    max-width: 90vw;
+    z-index: 2;
+}
+
+
+/* -----------------------------------
+   Contact Section
+------------------------------------ */
+.contact-wrapper {
+    background-color: #3F1F0B;
+    color: #FEECD3;
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.contact {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-align: left;
+}
+
+.contact p {
+    margin-bottom: 10px;
+}
+
+.contact-text {
+    font-size: clamp(20px, 1.5vw, 30px);
+    line-height: 1.4;
+}
+
+
+/* -----------------------------------
+   Card Styles
+------------------------------------ */
+.rectangle-yellow { background: #C9B132; }
+.rectangle-brown  { background: #885D42; }
+.rectangle-blue   { background: #BAD5CE; }
+
+.insta-container  { background-color: #C9453D; }
+.map-container    { background-color: #BAD5CE; }
+
+.insta-wrapper,
+.map-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.insta-container,
+.map-container {
+    border-radius: 2rem;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+/* -----------------------------------
+   Responsive - Mobile
+------------------------------------ */
+@media (max-width: 768px) {
+
+    .logo2 {
+        position: absolute;
+        bottom: 100px;
+        right: 20px;
+        width: 100%;
+        max-width: 70px;
+    }
+
+    .straw1 { top: 15vh; left: 0; width: 150px; }
+    .cr     { top: 80vh; right: 0; width: 200px; }
+
+    .logo {
+        z-index: 1;
+        position: absolute;
+        width: 80vw;
+        max-width: 300px;
+        height: auto;
+        left: 50%;
+        top: 50vh;
+        transform: translateX(-50%);
+    }
+
+    .card-container-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 10px;
+        margin-bottom: 3rem;
+    }
+
+    .card-container {
+        position: relative;
+        width: 243px;
+        height: 365px;
+        scroll-snap-align: center;
+    }
+
+    .rectangle-yellow,
+    .rectangle-blue,
+    .rectangle-brown {
+        width: 222px;
+        height: 344px;
+        border-radius: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slidePic {
+        width: 200px;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 35px;
+    }
+
+    .darbaLaiks {
+        width: 100%;
+        height: auto;
+        margin: 3rem auto;
+        display: block;
+        object-fit: contain;
+        z-index: 2;
+    }
+
+    .map-container iframe,
+    .instagram-media {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto !important;
+        min-height: 150px;
+        border-radius: 2rem;
+        display: block;
+    }
+
+    .cup, .bean3, .crois {
+        width: 100%;
+        max-width: 50px;
+    }
+
+    .straw2 {
+        width: 100%;
+        max-width: 100px;
+    }
+}
+
+
+/* -----------------------------------
+   Responsive - Desktop
+------------------------------------ */
+@media (min-width: 769px) {
+
+    .logo2 {
+        position: absolute;
+        bottom: 60px;
+        right: 50px;
+        width: 100%;
+        max-width: 100px;
+    }
+
+    .straw1 { top: 20vh; left: 0; width: 230px; }
+    .cr     { top: 145vh; right: 0; width: 270px; }
+
+    .logo {
+        position: absolute;
+        width: 80vw;
+        max-width: 300px;
+        height: auto;
+        left: 85%;
+        top: 50vh;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .card-container-wrapper {
+        display: inline-flex;
+        flex-direction: row;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 10px;
+        white-space: nowrap;
+        max-width: 100%;
+    }
+
+    .card-container {
+        flex: 0 0 auto;
+        width: 620px;
+        height: 780px;
+        scroll-snap-align: center;
+        margin-left: 20px;
+        min-width: 620px;
+    }
+
+    .rectangle-yellow,
+    .rectangle-blue,
+    .rectangle-brown {
+        width: 600px;
+        height: 760px;
+        border-radius: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slidePic {
+        width: 520px;
+        height: 670px;
+        object-fit: cover;
+        border-radius: 35px;
+    }
+
+    .instagram-media,
+    .map-container iframe {
+        width: 100% !important;
+        height: 300px !important;
+        border-radius: 1rem;
+    }
+
+    .darbaLaiks {
+        width: 50%;
+        height: auto;
+        margin: 3rem auto;
+        display: block;
+        object-fit: contain;
+        z-index: 2;
+    }
+
+    .cup, .bean3, .crois {
+        width: 100%;
+        max-width: 50px;
+    }
+
+    .straw2 {
+        width: 100%;
+        max-width: 100px;
+    }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="lv" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERI Cafe - Welcome Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:ital,wght@0,300&family=Gaegu:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.5rem;
+            color: #FEECD3;
+            animation: bounce 2s infinite;
+            text-decoration: none;
+            z-index: 10;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="hero">
+    <p class="heroText">Rīts un smaids,<br>
+        kafijas laiks,<br>
+        ērts un omulīgs,<br>
+        mūsu stūrītis<br>
+        maigš.</p>
+    <img src="images/logo.png" alt="ERI Cafe Logo" class="logo">
+
+    <!-- ↓↓↓ Scroll-down arrow added here ↓↓↓ -->
+    <a href="#start" class="scroll-down">&#8595;</a>
+</section>
+
+<div class="decorative-container">
+    <img src="images/straw1.png" class="straw1">
+    <img src="images/cr.png" class="cr">
+</div>
+
+<!-- ↓↓↓ Added id="start" for scroll target ↓↓↓ -->
+<main id="start">
+
+    <section class="description">
+        <h1>Mazs namiņš, liela sirds</h1>
+        <h3>(un silta kafija) <img src="images/cup.png" class="cup"></h3>
+        <p><b>ERI Cafe</b> ir omulīga vieta Ādažu sirdī; kur diena sākas ar siltu smaidu un kafijas aromātu.</p>
+        <p>Mēs ticam, ka vienkāršas lietas dara dzīvi īpašu — rīts kopā ar ģimeni, pastaiga ar suni, silta krūze rokā.</p>
+    </section>
+
+</main>
+
+<div class="card-container-wrapper">
+    <div class="card-container">
+        <div class="rectangle-brown">
+            <img src="images/coffee.png" class="slidePic" alt="Cup of coffee">
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="rectangle-blue">
+            <img src="images/kids.png" class="slidePic" alt="Kids in a field">
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="rectangle-yellow">
+            <img src="images/croissant.png" class="slidePic" alt="Baked goods">
+        </div>
+    </div>
+</div>
+
+<main>
+
+    <section class="description">
+        <p>Pie mums ir vieta ikvienam — gan mazajiem ciemiņiem, gan četrkājainajiem draugiem.</p>
+        <p>Te valda miers, draudzība un mājīgums. Kafija līdzņemšanai, sarunas uz vietas — viss pēc tavas izvēles.</p>
+    </section>
+
+    <section class="hours">
+        <h2>Atvērti, kad saule ir augstu, un kafija ir svaiga <img src="images/straw2.png" class="straw2"></h2>
+        <img src="images/laiks.png" class="darbaLaiks" alt="Darba laiks">
+    </section>
+
+    <section class="instagram">
+        <h3>Vairāk šeit <img src="images/3bean.png" class="bean3"></h3>
+        <div class="insta-wrapper">
+            <div class="insta-container">
+                <blockquote class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/ericafelv?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            data-instgrm-version="14"></blockquote>
+            </div>
+        </div>
+        <script async src="//www.instagram.com/embed.js"></script>
+    </section>
+
+    <section class="map">
+        <h4>Mēs te esam – tikai paskaties!<img src="images/crois.png" class="crois"></h4>
+        <div class="map-wrapper">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2168.5216440274576!2d24.323152477158313!3d57.076834073602924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eec9f4801e6729%3A0x5aa99c41ddad664b!2sEri%20Cafe!5e0!3m2!1sen!2de!4v1746620737904!5m2!1sen!2de" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<section class="contact-wrapper">
+    <div class="contact">
+        <p>+37129167522</p>
+        <p>info@eri-cafe.com</p>
+        <h4 class="contact-text">Zvaniet droši, mēs nekodīsim!</h4>
+    </div>
+    <img src="images/logo.png" alt="ERI Cafe Logo" class="logo2">
+</section>
+
+</body>
+</html>
