@@ -225,6 +225,10 @@ main {
 ------------------------------------ */
 @media (max-width: 768px) {
 
+    h1, h2, h3, h4 {
+        font-family: 'Gaegu', 'Comic Sans MS', cursive, sans-serif !important;
+    }
+
     .logo2 {
         position: absolute;
         bottom: 100px;
