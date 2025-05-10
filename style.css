@@ -13,7 +13,7 @@ html {
     transform: translateX(-50%);
     font-size: 2.5rem;
     color: #FEECD3;
-    animation: bounce 2s infinite;
+    animation: bounce 4s infinite;
     text-decoration: none;
     z-index: 10;
 }
@@ -60,11 +60,10 @@ html {
    Typography
 ------------------------------------ */
 h1, h2, h3, h4 {
-    font-family: 'Gaegu', 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Gluten', cursive;
     font-weight: 700;
-    margin: 0;
     font-size: clamp(25px, 5vw, 55px);
-    font-size-adjust: 0.5;
+    line-height: 0.4;
 }
 
 h1 { color: #3F1F0B; }
@@ -136,7 +135,7 @@ main {
     justify-content: flex-start;
     padding: 0 5vw;
     box-sizing: border-box;
-    margin-bottom: 0;
+    margin-bottom: 3rem;
     overflow: hidden;
 }
 
@@ -155,8 +154,7 @@ main {
 .heroText {
     margin-top: -30vh;
     font-size: clamp(40px, 5vw, 48px);
-    font-family: 'Gaegu', 'Comic Sans MS', cursive, sans-serif;
-    font-size-adjust: 0.5;
+    font-family: 'Gluten', cursive;
     line-height: 1.5;
     color: #FEECD3;
     max-width: 90vw;
@@ -224,10 +222,6 @@ main {
    Responsive - Mobile
 ------------------------------------ */
 @media (max-width: 768px) {
-
-    h1, h2, h3, h4 {
-        font-family: 'Gaegu', 'Comic Sans MS', cursive, sans-serif !important;
-    }
 
     .logo2 {
         position: absolute;
@@ -308,12 +302,12 @@ main {
 
     .cup, .bean3, .crois {
         width: 100%;
-        max-width: 50px;
+        max-width: 30px;
     }
 
     .straw2 {
         width: 100%;
-        max-width: 100px;
+        max-width: 50px;
     }
 }
 
