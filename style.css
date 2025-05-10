@@ -167,32 +167,42 @@ main {
     z-index: 2;
 }
 
-
-
 /* -----------------------------------
-   Contact Section
+   Contact
 ------------------------------------ */
 .contact-wrapper {
     background-color: #3F1F0B;
     color: #FEECD3;
-    position: relative;  /* Keep it relative, so it stays in normal document flow */
+    position: relative;  /* Keep it relative to position elements inside */
     width: 100%;
-    padding: 2rem 0; /* Add padding as necessary to adjust size */
-    margin-top: auto; /* Push it to the bottom of the page */
+    padding: 2rem 0; /* Adjust padding to your preference */
+    margin-top: auto; /* Pushes the section to the bottom of the page */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;  /* Align content to the left */
+    align-items: flex-start;  /* Align content to the top of the section */
+    flex-direction: column;  /* Stack elements vertically */
 }
 
+/* Styling for contact info text */
 .contact {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    text-align: left;
+    position: relative;
+    z-index: 1;
+    text-align: left; /* Align contact info to the left */
+    padding-left: 1rem;  /* Space from left edge */
 }
 
+/* Styling for the logo */
+.logo2 {
+    position: absolute;  /* Position logo absolutely */
+    top: 10px;            /* Adjust distance from top */
+    right: 10px;          /* Adjust distance from right */
+    max-width: 70px;      /* Set maximum width for the logo */
+    z-index: 2;           /* Ensure it stays on top of other content */
+}
+
+/* Contact text styling */
 .contact p {
-    margin-bottom: 10px;
+    margin-bottom: 10px;  /* Space between contact info lines */
 }
 
 .contact-text {
@@ -234,15 +244,12 @@ main {
 ------------------------------------ */
 @media (max-width: 768px) {
 
-    .contact-wrapper {
-        height: 24vh;
-    }
 
     .logo2 {
-        position: absolute;
-        bottom: 100px;
-        right: 20px;
-        width: 100%;
+        position: absolute;  /* Position the logo absolutely */
+        top: 10px;           /* Adjust to your desired distance from the top */
+        right: 10px;         /* Adjust to your desired distance from the right */
+        width: auto;
         max-width: 70px;
     }
 
@@ -332,9 +339,7 @@ main {
 ------------------------------------ */
 @media (min-width: 769px) {
 
-    .contact-wrapper {
-        height: 40vh;
-    }
+
 
     .logo2 {
         position: absolute;
