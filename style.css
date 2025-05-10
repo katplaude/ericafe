@@ -2,46 +2,18 @@
    Animation
 ------------------------------------ */
 
-html {
-    scroll-behavior: smooth;
-}
-
-.scroll-down {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2.5rem;
-    color: #FEECD3;
-    animation: bounce 4s infinite;
-    text-decoration: none;
-    z-index: 10;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateX(-50%) translateY(0);
-    }
-    40% {
-        transform: translateX(-50%) translateY(-10px);
-    }
-    60% {
-        transform: translateX(-50%) translateY(-5px);
-    }
-}
-
 @keyframes strongBounce {
     0%, 100% {
         transform: rotate(0deg) translateY(0);
     }
     25% {
-        transform: rotate(5deg) translateY(-10px);
+        transform: rotate(5deg) translateY(-3px);
     }
     50% {
-        transform: rotate(-5deg) translateY(10px);
+        transform: rotate(-5deg) translateY(3px);
     }
     75% {
-        transform: rotate(5deg) translateY(-10px);
+        transform: rotate(5deg) translateY(-3px);
     }
 }
 
@@ -128,8 +100,6 @@ main {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url("images/first.png") no-repeat center center;
-    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -137,17 +107,51 @@ main {
     box-sizing: border-box;
     margin-bottom: 3rem;
     overflow: hidden;
+    transition: background-image 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
 }
 
+.fade-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease;
+    z-index: -1;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 2s ease-in-out;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* Make sure one layer is visible initially */
+#bg1 {
+    opacity: 1;
+}
+
+/* Adjust the overlay to fully cover */
 .hero::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 120%;
-    height: 120vh;
-    background: rgba(63, 31, 11, 0.75);
-    filter: blur(8px);
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 20, 5, 0.75); /* Adjust opacity as needed */
     z-index: 0;
 }
 
@@ -162,6 +166,7 @@ main {
 }
 
 
+
 /* -----------------------------------
    Contact Section
 ------------------------------------ */
@@ -170,7 +175,7 @@ main {
     color: #FEECD3;
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 40vh;
 }
 
 .contact {
@@ -232,7 +237,7 @@ main {
     }
 
     .straw1 { top: 15vh; left: 0; width: 150px; }
-    .cr     { top: 80vh; right: 0; width: 200px; }
+    .cr     { top: 90vh; right: 0; width: 200px; }
 
     .logo {
         z-index: 1;
