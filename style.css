@@ -175,8 +175,13 @@ main {
 .contact-wrapper {
     background-color: #3F1F0B;
     color: #FEECD3;
-    position: relative;
+    position: relative;  /* Keep it relative, so it stays in normal document flow */
     width: 100%;
+    padding: 2rem 0; /* Add padding as necessary to adjust size */
+    margin-top: auto; /* Push it to the bottom of the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact {
