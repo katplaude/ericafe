@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     const images = [
-        "images/hero1.png",
-        "images/hero2.png",
-        "images/hero3.png",
-        "images/hero4.png",
-        "images/first.png"
+        "images/DSC00475.JPG",
+        "images/DSC00482.JPG",
+        "images/DSC00488.JPG",
+        "images/DSC00497.JPG",
+        "images/DSC00473.JPG"
     ];
 
     const bg1 = document.getElementById("bg1");
