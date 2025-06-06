@@ -13,9 +13,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let index = 1;
     let showingBg1 = true;
 
-    // Initial background
+    //Предзагрузка всех изображений
+    images.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+    });
+
+    // Начальный фон
     bg1.style.backgroundImage = `url('${images[0]}')`;
 
+    // Слайдшоу
     setInterval(() => {
         const nextImage = images[index % images.length];
         if (showingBg1) {
@@ -30,5 +37,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
         showingBg1 = !showingBg1;
         index++;
-    }, 6000); // Change every 6 seconds
+    }, 6000);
 });
